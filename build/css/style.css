@@ -547,22 +547,37 @@ input:-webkit-autofill {
 .conteiner {
   max-width: 1640px;
   margin: 0 auto; }
+  @media (max-width: 1920px) {
+    .conteiner {
+      width: 1170px; } }
+  @media (max-width: 1400px) {
+    .conteiner {
+      width: 992px; } }
+  @media (max-width: 990px) {
+    .conteiner {
+      width: 767px; } }
+  @media (max-width: 770px) {
+    .conteiner {
+      width: 95%; } }
 
 .header {
-  background-image: url("../img/Rectangle 237.png");
-  min-height: 880px;
-  padding: 50px 0 0 0;
-  position: relative;
-  margin: 0 0 250px 0; }
+  background-color: #F8F8F8;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  padding: 50px 0 50px 0; }
+  @media (max-width: 990px) {
+    .header {
+      margin-bottom: 150px; } }
   .header__top-inner {
     display: flex;
     align-items: center;
     justify-content: space-between; }
   .header .logo {
     width: 50%; }
-  .header .logo__img {
-    width: 153px;
-    height: 59px; }
+    .header .logo__img {
+      width: 153px;
+      height: 59px; }
   .header .menu {
     width: 50%;
     display: flex;
@@ -570,23 +585,35 @@ input:-webkit-autofill {
     justify-content: space-around; }
     .header .menu__img:hover .menu__img-element {
       fill: #FFCC80; }
-  .header__content::after {
+
+.top-block {
+  background-image: url("../img/Rectangle 237.png");
+  min-height: 850px;
+  position: relative;
+  margin: 0 0 250px 0; }
+  @media (max-width: 990px) {
+    .top-block {
+      display: none; } }
+  .top-block__content::after {
     position: absolute;
     left: 0;
     bottom: 0;
     content: url("../img/Vector 37.png"); }
-  .header__content::before {
+  .top-block__content::before {
     position: absolute;
     right: 0;
     bottom: 0;
     content: url("../img/Vector 34.png"); }
-  .header__content-img::after {
+  .top-block__content-img::after {
     position: absolute;
     z-index: 2;
     left: 50%;
     bottom: 50%;
     content: url("../img/Frame.svg"); }
-  .header__img {
+    @media (max-width: 1400px) {
+      .top-block__content-img::after {
+        display: none; } }
+  .top-block__img {
     position: absolute;
     bottom: -50px;
     right: 15%; }
@@ -625,6 +652,13 @@ input:-webkit-autofill {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 90px 190px; }
+    @media (max-width: 1400px) {
+      .plan__items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 45px 95px; } }
+    @media (max-width: 990px) {
+      .plan__items {
+        grid-template-columns: repeat(1, 1fr); } }
     .plan__items::before {
       position: absolute;
       top: -120px;
@@ -658,21 +692,40 @@ input:-webkit-autofill {
   margin-bottom: 350px;
   padding: 73px 0 5px 0;
   background-image: url("../img/Subtract.png"); }
+  @media (max-width: 990px) {
+    .quote {
+      min-height: -webkit-max-content;
+      min-height: -moz-max-content;
+      min-height: max-content;
+      padding: 50px 0 50px 0; } }
   .quote__content {
     display: flex;
     justify-content: space-evenly; }
+    @media (max-width: 990px) {
+      .quote__content {
+        display: flex;
+        justify-content: space-evenly; } }
     .quote__content::after {
       position: absolute;
       left: 0;
       top: -50px;
       content: url("../img/Vector 59.png"); }
+      @media (max-width: 990px) {
+        .quote__content::after {
+          display: none; } }
     .quote__content::before {
       position: absolute;
       right: 0;
       bottom: -150px;
       content: url("../img/Vector 60.png"); }
+      @media (max-width: 990px) {
+        .quote__content::before {
+          display: none; } }
   .quote__img {
     height: 95%; }
+    @media (max-width: 990px) {
+      .quote__img {
+        display: none; } }
   .quote__text {
     position: relative;
     width: 650px;
@@ -683,6 +736,10 @@ input:-webkit-autofill {
     line-height: 34px;
     color: #3C4852;
     padding: 250px 0 0 0; }
+    @media (max-width: 990px) {
+      .quote__text {
+        width: 100%;
+        padding: 0; } }
     .quote__text::before {
       position: absolute;
       top: 180px;
@@ -693,8 +750,15 @@ input:-webkit-autofill {
       background: #FFCC80;
       border-radius: 11px;
       transform: rotate(90deg); }
+      @media (max-width: 990px) {
+        .quote__text::before {
+          top: -70px;
+          left: 35px; } }
   .quote__paragraf {
     margin-bottom: 18px; }
+    @media (max-width: 990px) {
+      .quote__paragraf {
+        margin-bottom: 18px; } }
     .quote__paragraf:last-child {
       margin-bottom: 0; }
 
@@ -730,7 +794,7 @@ input:-webkit-autofill {
     border-radius: 50%;
     margin-bottom: 80px; }
   .guarantee__img {
-    widows: 95px;
+    width: 95px;
     height: 102px; }
   .guarantee__text {
     text-align: center;
@@ -751,6 +815,9 @@ input:-webkit-autofill {
     left: 0;
     top: -150px;
     content: url("../img/Vector 61.png"); }
+    @media (max-width: 1400px) {
+      .footer::before {
+        display: none; } }
   .footer .payment__flex-box {
     display: flex;
     align-items: center;
@@ -826,63 +893,3 @@ input:-webkit-autofill {
     background-color: #FFCC80;
     border: 1px solid #FFCC80;
     border-radius: 10px; }
-
-@media (max-width: 1920px) {
-  .conteiner {
-    width: 1170px; } }
-
-@media (max-width: 1400px) {
-  .conteiner {
-    width: 992px; }
-  .header__content-img::after {
-    display: none; }
-  .plan__items {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 45px 95px; }
-  .footer::before {
-    display: none; } }
-
-@media (max-width: 990px) {
-  .conteiner {
-    width: 767px; }
-  .header {
-    min-height: -webkit-max-content;
-    min-height: -moz-max-content;
-    min-height: max-content;
-    padding-bottom: 50px; }
-    .header__content::after {
-      display: none; }
-    .header__content::before {
-      display: none; }
-    .header__img {
-      display: none; }
-  .plan__items {
-    grid-template-columns: repeat(1, 1fr); }
-  .quote {
-    min-height: -webkit-max-content;
-    min-height: -moz-max-content;
-    min-height: max-content;
-    padding: 50px 0 50px 0; }
-    .quote__content {
-      display: flex;
-      justify-content: space-evenly; }
-      .quote__content::after {
-        display: none; }
-      .quote__content::before {
-        display: none; }
-    .quote__img {
-      display: none; }
-    .quote__text {
-      width: 100%;
-      padding: 0; }
-      .quote__text::before {
-        top: -70px;
-        left: 35px; }
-    .quote__paragraf {
-      margin-bottom: 18px; }
-      .quote__paragraf:last-child {
-        margin-bottom: 0; } }
-
-@media (max-width: 770px) {
-  .conteiner {
-    width: 95%; } }

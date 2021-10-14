@@ -8,14 +8,33 @@
 .conteiner{
     max-width: 1640px;
     margin: 0 auto;
+
+    @media (max-width: 1920px) {
+        width: 1170px;
+      }
+    
+    @media (max-width: 1400px) {
+        width: 992px;
+      }
+
+    @media (max-width: 990px) {
+        width: 767px;
+      }
+    
+    @media (max-width: 770px) {
+        width: 95%;
+      }
+
 }
 
 .header{
-    background-image: url("../img/Rectangle\ 237.png");
-    min-height: 880px;
-    padding: 50px 0 0 0;
-    position: relative;
-    margin: 0 0 250px 0;
+    background-color: $darkGrrey;
+    min-height: max-content;
+    padding: 50px 0 50px 0;
+
+    @media (max-width: 990px){
+        margin-bottom: 150px;
+    }
 
     &__top-inner{
         display: flex;
@@ -25,11 +44,11 @@
 
     .logo{
         width: 50%;
-    }
 
-    .logo__img{
-        width: 153px;
-        height: 59px;
+        &__img{
+            width: 153px;
+            height: 59px;
+        }
     }
 
     .menu{
@@ -38,31 +57,56 @@
         align-items: center;
         justify-content: space-around;
 
-        &__img:hover .menu__img-element{
-            fill: $orangeColor;
+        &__img{
+            &:hover{
+                .menu__img-element{
+                    fill: $orangeColor;
+                }
+            }
+        }
+    }
+}
+
+.top-block{
+    background-image: url("../img/head_bg.png");
+    min-height: 850px;
+    position: relative;
+    margin: 0 0 250px 0;
+
+    @media (max-width: 990px) {
+        display: none;
+    }
+
+    &__content{
+        &::after{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: url("../img/top_left.png") ;
         }
     }
 
-    &__content::after{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        content: url("../img/Vector\ 37.png") ;
+    &__content{
+        &::before{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            content: url("../img/top_right.png") ;
+        }
     }
 
-    &__content::before{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        content: url("../img/Vector\ 34.png") ;
-    }
+    &__content-img{
+        &::after{
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            bottom: 50%;
+            content: url("../img/smile.svg") ;
 
-    &__content-img::after{
-        position: absolute;
-        z-index: 2;
-        left: 50%;
-        bottom: 50%;
-        content: url("../img/Frame.svg") ;
+            @media (max-width: 1400px) {
+                display: none;
+              }
+        }
     }
 
     &__img{
@@ -117,6 +161,15 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 90px 190px;
 
+        @media (max-width: 1400px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 45px 95px;
+          }
+
+        @media (max-width: 990px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
         &::before{
             position: absolute;
             top: -120px;
@@ -160,30 +213,51 @@
     min-height: 718px;
     margin-bottom: 350px;
     padding: 73px 0 5px 0 ;
-    background-image: url("../img/Subtract.png");
+    background-image: url("../img/main_bg.png");
+
+    @media (max-width: 990px) {
+        min-height: max-content;
+        padding: 50px 0 50px 0 ;
+    }
 
     &__content{
         display: flex;
         justify-content: space-evenly;
 
+        @media (max-width: 990px) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
         &::after{
             position: absolute;
             left: 0;
             top: -50px;
-            content: url("../img/Vector\ 59.png") ;
+            content: url("../img/middle_left.png") ;
+
+            @media (max-width: 990px) {
+                display: none;
+            }
         }
 
-        
         &::before{
             position: absolute;
             right: 0;
             bottom: -150px;
-            content: url("../img/Vector\ 60.png") ;
+            content: url("../img/middle_right.png") ;
+
+            @media (max-width: 990px) {
+                display: none;
+            }
         }
     }
 
     &__img{
         height: 95%;
+
+        @media (max-width: 990px) {
+            display: none;
+        }
     }
 
     &__text{
@@ -197,6 +271,11 @@
         color: $textColor;
         padding: 250px 0 0 0;
 
+        @media (max-width: 990px) {
+            width: 100%;
+            padding: 0;
+        }
+
         &::before{
             position: absolute;
             top: 180px;
@@ -207,11 +286,20 @@
             background: $orangeColor;
             border-radius: 11px;
             transform: rotate(90deg);
+
+            @media (max-width: 990px) {
+                top: -70px;
+                left: 35px;
+            }
         }
     }
 
     &__paragraf{
         margin-bottom: 18px;
+
+        @media (max-width: 990px) {
+            margin-bottom: 18px;
+        }
 
         &:last-child{
             margin-bottom: 0;
@@ -260,7 +348,7 @@
     }
 
     &__img{
-        widows: 95px;
+        width: 95px;
         height: 102px;
     }
 
@@ -277,7 +365,7 @@
 
 .footer{
     position: relative;
-    background-image: url("../img/Subtract1.png");
+    background-image: url("../img/footer_bg.png");
     background-color: $whiteColor;
     min-height: 200px;
 
@@ -285,7 +373,11 @@
         position: absolute;
         left: 0;
         top: -150px;
-        content: url("../img/Vector\ 61.png") ;
+        content: url("../img/footer_left.png") ;
+
+        @media (max-width: 1400px) {
+            display: none;
+        }
     }
 
     .payment{
@@ -402,111 +494,3 @@
         }
     }
 }
-
-@media (max-width: 1920px) {
-    .conteiner{
-        width: 1170px;
-    }
-  }
-  
-  @media (max-width: 1400px) {
-  
-    .conteiner{
-        width: 992px;
-    }
-  
-    .header{
-      &__content-img::after{
-        display: none;
-      }
-    }
-
-    .plan{
-        &__items{
-            grid-template-columns: repeat(2, 1fr);
-            gap: 45px 95px;
-        }
-    }
-    .footer{
-            &::before{
-            display: none;
-        }
-    }
-  }
-  
-  @media (max-width: 990px) {
-  
-    .conteiner{
-        width: 767px;
-    }
-  
-    .header{
-      min-height: max-content;
-      padding-bottom: 50px;
-  
-      &__content::after{
-        display: none;
-      }
-  
-    &__content::before{
-      display: none;
-        }
-  
-    
-      &__img{
-        display: none;
-        } 
-    }
-    .plan{
-        &__items{
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-    .quote{
-        min-height: max-content;
-        padding: 50px 0 50px 0 ;
-    
-        &__content{
-            display: flex;
-            justify-content: space-evenly;
-    
-            &::after{
-                display: none;
-            }
-    
-            
-            &::before{
-                display: none;
-            }
-        }
-    
-        &__img{
-            display: none;
-        }
-    
-        &__text{
-            width: 100%;
-            padding: 0;
-
-            &::before{
-                top: -70px;
-                left: 35px;
-            }
-        }
-    
-        &__paragraf{
-            margin-bottom: 18px;
-    
-            &:last-child{
-                margin-bottom: 0;
-            }
-        }
-    }
-  }
-  
-  @media (max-width: 770px) {
-    .conteiner{
-        width: 95%;
-    }
-  }
