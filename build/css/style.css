@@ -587,7 +587,7 @@ input:-webkit-autofill {
       fill: #FFCC80; }
 
 .top-block {
-  background-image: url("../img/Rectangle 237.png");
+  background-image: url("../img/head_bg.png");
   min-height: 850px;
   position: relative;
   margin: 0 0 250px 0; }
@@ -598,18 +598,18 @@ input:-webkit-autofill {
     position: absolute;
     left: 0;
     bottom: 0;
-    content: url("../img/Vector 37.png"); }
+    content: url("../img/top_left.png"); }
   .top-block__content::before {
     position: absolute;
     right: 0;
     bottom: 0;
-    content: url("../img/Vector 34.png"); }
+    content: url("../img/top_right.png"); }
   .top-block__content-img::after {
     position: absolute;
     z-index: 2;
     left: 50%;
     bottom: 50%;
-    content: url("../img/Frame.svg"); }
+    content: url("../img/smile.svg"); }
     @media (max-width: 1400px) {
       .top-block__content-img::after {
         display: none; } }
@@ -691,7 +691,7 @@ input:-webkit-autofill {
   min-height: 718px;
   margin-bottom: 350px;
   padding: 73px 0 5px 0;
-  background-image: url("../img/Subtract.png"); }
+  background-image: url("../img/main_bg.png"); }
   @media (max-width: 990px) {
     .quote {
       min-height: -webkit-max-content;
@@ -709,7 +709,7 @@ input:-webkit-autofill {
       position: absolute;
       left: 0;
       top: -50px;
-      content: url("../img/Vector 59.png"); }
+      content: url("../img/middle_left.png"); }
       @media (max-width: 990px) {
         .quote__content::after {
           display: none; } }
@@ -717,7 +717,7 @@ input:-webkit-autofill {
       position: absolute;
       right: 0;
       bottom: -150px;
-      content: url("../img/Vector 60.png"); }
+      content: url("../img/middle_right.png"); }
       @media (max-width: 990px) {
         .quote__content::before {
           display: none; } }
@@ -807,14 +807,14 @@ input:-webkit-autofill {
 
 .footer {
   position: relative;
-  background-image: url("../img/Subtract1.png");
+  background-image: url("../img/footer_bg.png");
   background-color: #FFFFFF;
   min-height: 200px; }
   .footer::before {
     position: absolute;
     left: 0;
     top: -150px;
-    content: url("../img/Vector 61.png"); }
+    content: url("../img/footer_left.png"); }
     @media (max-width: 1400px) {
       .footer::before {
         display: none; } }
